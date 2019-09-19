@@ -47,9 +47,12 @@ body {
 
 [class^="btn"] {
   padding: .5rem 1.5rem;
+  
   background: none;
   border: none;
   color: steelblue;
+  outline: none;
+
   font-weight: 700;
   font-size: 1.5rem;
   letter-spacing: 1px;
@@ -105,3 +108,12 @@ body {
 }
 
 .square:active {transform: translateY(0);}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+  .container {
+    max-width: 100%;
+  }
+}

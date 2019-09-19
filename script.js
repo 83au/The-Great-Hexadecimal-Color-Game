@@ -101,7 +101,7 @@ function setupButtons() {
     this.innerText = hexToRgb(pickedColor);
   });
 
-  resetButton.addEventListener("click", reset);
+  resetButton.addEventListener("click", init);
 
   easyButton.addEventListener("click", function() {
     this.classList.add("chosen");
