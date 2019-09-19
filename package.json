@@ -1,0 +1,15 @@
+{
+  "name": "hexcolorgame",
+  "version": "1.0.0",
+  "description": "Color guessing game using Hexadecimal values.",
+  "main": "script.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Beau Sherman",
+  "license": "ISC"
+}

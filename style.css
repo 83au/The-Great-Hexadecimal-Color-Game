@@ -1,0 +1,107 @@
+/* ===== RESET ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+
+/* ===== GLOBAL ===== */
+html {
+  font-family: 'Montserrat';
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #232323;
+  box-sizing: border-box;
+}
+
+
+/* ===== HEADING ===== */
+.heading {
+  padding: 2rem 0;
+  background-color: steelblue;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.color-display-outer {
+  margin: 1rem 0;
+  font-size: 6rem;
+}
+
+
+/* ====== CONTROL PANEL ===== */
+.control-panel {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  font-size: 1.5rem;
+}
+
+[class^="btn"] {
+  padding: .5rem 1.5rem;
+  background: none;
+  border: none;
+  color: steelblue;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+[class^="btn"]:hover {
+  background-color: steelblue;
+  color: #fff;
+}
+
+.btn-hint {margin-left: -8rem;}
+
+.btn-reset {margin-right: 1rem;}
+
+.message {
+  display: block;
+  flex: 0 0 20%;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.chosen {
+  background-color: steelblue;
+  color: #fff;
+}
+
+
+/* ===== SQUARES ===== */
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2rem auto;
+  max-width: 50%;
+}
+
+.square {
+  margin: 1rem 0;
+  padding-bottom: 30%;
+  background-color: purple;
+  border-radius: 15%;
+  box-shadow: 0 6px 7px rgba(0, 0, 0, .6);
+  cursor: pointer;
+  width: 30%;
+  transition: .2s;
+}
+
+.square:hover {
+  transform: translateY(-.5rem);
+  box-shadow: 0 6px 1rem rgba(0, 0, 0, .5);
+}
+
+.square:active {transform: translateY(0);}
