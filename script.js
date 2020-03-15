@@ -22,14 +22,15 @@ function init() {
   colors = setColors(),
   pickedColor = pickColor();
 
-  hintButton.innerText = "Hint?";
-  resetButton.innerText = "New colors?";
-  colorDisplay.innerText = pickedColor;
-  message.innerText = "";
+  hintButton.textContent = "Hint?";
+  resetButton.textContent = "New colors?";
+  colorDisplay.textContent = pickedColor;
+  message.textContent = "";
 
   setUpSquares();
   setupButtons();
 }
+
 
 function setColors() {
   const arr = [];
@@ -39,6 +40,7 @@ function setColors() {
   return arr;
 }
 
+
 function generateColor() {
   const r = Math.floor(Math.random() * 256),
         g = Math.floor(Math.random() * 256),
@@ -46,16 +48,19 @@ function generateColor() {
   return `#${numToHex(r)}${numToHex(g)}${numToHex(b)}`;
 }
 
+
 function numToHex(n) {
   let hex = n.toString(16);
   if (hex.length < 2) hex = "0" + hex;
   return `${hex}`;
 }
 
+
 function pickColor() {
   const random = Math.floor(Math.random() * numColors);
   return colors[random];
 }
+
 
 function setUpSquares() {
   squares.forEach((square, i) => {
@@ -66,14 +71,14 @@ function setUpSquares() {
       square.style.display = 'none';      
     }
 
-    square.addEventListener('click', function () {
+    square.addEventListener('click', function() {
       let currColor = this.style.backgroundColor;
       currColor = rgbToHex(currColor);
       
       if (currColor === pickedColor) {
         changeSquares();
-        message.innerText = "CORRECT!";
-        resetButton.innerText = "Play again?";
+        message.textContent = "CORRECT!";
+        resetButton.textContent = "Play again?";
       } else {
         this.style.backgroundColor = '#232323';
         this.style.boxShadow = 'none';
@@ -81,6 +86,7 @@ function setUpSquares() {
     });
   });
 }
+
 
 function rgbToHex(rgb) {
   rgb = rgb.split('(');
@@ -90,14 +96,16 @@ function rgbToHex(rgb) {
   return `#${rgb.join('')}`;
 }
 
+
 function changeSquares() {
   squares.forEach(square => {
     square.style.backgroundColor = pickedColor;
   });
 }
 
+
 function setupButtons() {
-  hintButton.addEventListener("click", function () {
+  hintButton.addEventListener("click", function() {
     this.innerText = hexToRgb(pickedColor);
   });
 
@@ -115,6 +123,7 @@ function setupButtons() {
     init();
   });
 }
+
 
 function hexToRgb(hex) {
   hex = hex.split('');
