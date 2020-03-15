@@ -4,7 +4,8 @@
   "description": "Color guessing game using Hexadecimal values.",
   "main": "script.js",
   "dependencies": {
-    "acorn": "^7.1.1"
+    "acorn": "^7.1.1",
+    "minimist": "^1.2.5"
   },
   "devDependencies": {
     "eslint": "^6.4.0"
