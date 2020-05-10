@@ -7,10 +7,14 @@
   box-sizing: inherit;
 }
 
+:root {
+  --color-primary: hsl(220, 100%, 60%);
+}
+
 
 /* ===== GLOBAL ===== */
 html {
-  font-family: 'Montserrat', "Lato", sans-serif;
+  font-family: 'Balsamiq Sans', sans-serif;
   font-size: 62.5%;
 }
 
@@ -23,7 +27,7 @@ body {
 /* ===== HEADING ===== */
 .heading {
   padding: 2rem 0;
-  background-color: steelblue;
+  background-color: var(--color-primary);
   color: #fff;
   font-size: 3rem;
   font-weight: 400;
@@ -50,7 +54,8 @@ body {
 
   background: none;
   border: none;
-  color: steelblue;
+  color: var(--color-primary);
+  cursor: pointer;
   outline: none;
 
   font-weight: 700;
@@ -60,7 +65,7 @@ body {
 }
 
 [class^="btn"]:hover {
-  background-color: steelblue;
+  background-color: var(--color-primary);
   color: #fff;
 }
 
@@ -76,7 +81,7 @@ body {
 }
 
 .chosen {
-  background-color: steelblue;
+  background-color: var(--color-primary);
   color: #fff;
 }
 
@@ -95,7 +100,7 @@ body {
   margin: 1rem 0;
   padding-bottom: 30%;
   background-color: purple;
-  border-radius: 15%;
+  border-radius: 50%;
   box-shadow: 0 6px 7px rgba(0, 0, 0, .6);
   cursor: pointer;
   width: 30%;
